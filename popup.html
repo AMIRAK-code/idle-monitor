@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 220px; font-family: sans-serif; padding: 15px; }
+    h3 { margin-top: 0; }
+    .control-group { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 5px; font-weight: bold; }
+    input[type="number"] { width: 100%; padding: 8px; box-sizing: border-box; }
+    
+    /* Toggle Switch Style for Sound */
+    .checkbox-wrapper { display: flex; align-items: center; gap: 10px; margin-top: 10px;}
+    .checkbox-wrapper label { margin: 0; font-weight: normal; }
+    
+    button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;}
+    button.stop { background: #dc3545; }
+    button:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <h3>Idle Alert</h3>
+  
+  <div class="control-group">
+    <label>Minutes allowed:</label>
+    <input type="number" id="timeout" value="5" min="1">
+  </div>
+
+  <div class="checkbox-wrapper">
+    <input type="checkbox" id="soundToggle"> 
+    <label for="soundToggle">Play Alert Chime</label>
+  </div>
+
+  <br>
+  <button id="toggleBtn">Start Monitoring</button>
+  <script src="popup.js"></script>
+</body>
+</html>
